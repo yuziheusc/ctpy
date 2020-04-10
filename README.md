@@ -5,7 +5,7 @@ This package is a interface for the R implementation of causal tree.
 This package relies on rpy2, which runs embedded R session in a pyhton process.
 
 ## Features
-### Support constructing, pruning and ploting of causal trees. Any parameter available for constructing causal trees is supported.
+Support constructing, pruning and ploting of causal trees. Any parameter available for constructing causal trees is supported.
 
 ## Installation
 
@@ -22,7 +22,7 @@ pip install rpy2
 ### 3. Install ctpy
 Download with
 ```shell
-git clone xxx
+git clone https://github.com/yuziheusc/ctpy
 ```
 
 ## Example
@@ -58,7 +58,7 @@ ct.plot_tree(file="tree_pru.png")
 ```
 
 ## Additional Note
-### 1. I did not find a way to get prediction y(x|t=0) and y(x|t=1) from the R code
+1. I did not find a way to get prediction y(x|t=0) and y(x|t=1) from the R code
 
-### 2. Causal forest feature will be added!
+2. Causal forest feature will be added!
 
