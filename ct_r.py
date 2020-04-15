@@ -58,9 +58,9 @@ class causal_tree_r(object):
         status = robjects.r(cmd)
     
     def predict(self):
-        ## no R interface for predict found
+    	## no R interface for predict found
     	raise NotImplementedError("causal_tree_r.predict()")
-        pass
+    	pass
     
     def show_cp_table(self):
         gc.collect()
