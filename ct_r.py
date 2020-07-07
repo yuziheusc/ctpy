@@ -57,10 +57,15 @@ class causal_tree_r(object):
         ## run cmd
         status = robjects.r(cmd)
     
-    def predict(self):
+    def predict(self, df_new):
     	## no R interface for predict found
-    	raise NotImplementedError("causal_tree_r.predict()")
-    	pass
+    	#raise NotImplementedError("causal_tree_r.predict()")
+    	#pass
+
+        robjects.globalenv["df_new"] = df_new
+        res = robjects.r('predict(%s, df_new)'%(self.model_name))
+        return res
+
     
     def show_cp_table(self):
         gc.collect()
